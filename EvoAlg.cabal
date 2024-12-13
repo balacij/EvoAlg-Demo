@@ -1,0 +1,175 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.37.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           EvoAlg
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/balacij/EvoAlg>
+homepage:       https://github.com/github.com/balacij#readme
+bug-reports:    https://github.com/github.com/balacij/issues
+author:         Jason Balaci
+maintainer:     jason@balaci.me
+copyright:      2024 Jason Balaci
+license:        BSD-3-Clause
+license-file:   LICENSE
+build-type:     Simple
+
+source-repository head
+  type: git
+  location: https://github.com/github.com/balacij
+  subdir: EvoAlg
+
+library
+  exposed-modules:
+      EvoAlg.Grammatical
+      EvoAlg.Grammatical.Evolution
+      EvoAlg.Grammatical.Genome
+      EvoAlg.TreeGenetic
+      EvoAlg.TreeGenetic.Evolution
+      Lang.Grammar
+      Lang.Grammar.Core
+      Lang.Grammar.Examples
+      Lang.Math
+      Lang.Math.Core
+      Lang.Math.Eval
+      Lang.Math.Grammar.AST
+      Lang.Math.Grammar.CST
+  other-modules:
+      Paths_EvoAlg
+  autogen-modules:
+      Paths_EvoAlg
+  hs-source-dirs:
+      lib
+  default-extensions:
+      OverloadedStrings
+      StrictData
+      LambdaCase
+      InstanceSigs
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -Wno-orphans -Wno-missing-export-lists
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , cassava
+    , containers
+    , deepseq
+    , directory
+    , filepath
+    , megaparsec
+    , parallel
+    , parsec
+    , parser-combinators
+    , random
+    , text
+    , vector
+    , vector-algorithms
+  default-language: Haskell2010
+
+executable ge-ast-exe
+  main-is: GE/MainAST.hs
+  other-modules:
+      GE.Common
+      GE.MainCST
+      GP.Main
+      Paths_EvoAlg
+  autogen-modules:
+      Paths_EvoAlg
+  hs-source-dirs:
+      app
+  default-extensions:
+      OverloadedStrings
+      StrictData
+      LambdaCase
+      InstanceSigs
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -Wno-orphans -Wno-missing-export-lists -threaded -rtsopts -with-rtsopts=-N6 -O2 -main-is GE.MainAST
+  build-depends:
+      EvoAlg
+    , base >=4.7 && <5
+    , bytestring
+    , cassava
+    , containers
+    , deepseq
+    , directory
+    , filepath
+    , megaparsec
+    , parallel
+    , parsec
+    , parser-combinators
+    , random
+    , text
+    , vector
+    , vector-algorithms
+  default-language: Haskell2010
+
+executable ge-cst-exe
+  main-is: GE/MainCST.hs
+  other-modules:
+      GE.Common
+      GE.MainAST
+      GP.Main
+      Paths_EvoAlg
+  autogen-modules:
+      Paths_EvoAlg
+  hs-source-dirs:
+      app
+  default-extensions:
+      OverloadedStrings
+      StrictData
+      LambdaCase
+      InstanceSigs
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -Wno-orphans -Wno-missing-export-lists -threaded -rtsopts -with-rtsopts=-N6 -O2 -main-is GE.MainCST
+  build-depends:
+      EvoAlg
+    , base >=4.7 && <5
+    , bytestring
+    , cassava
+    , containers
+    , deepseq
+    , directory
+    , filepath
+    , megaparsec
+    , parallel
+    , parsec
+    , parser-combinators
+    , random
+    , text
+    , vector
+    , vector-algorithms
+  default-language: Haskell2010
+
+executable gp-exe
+  main-is: GP/Main.hs
+  other-modules:
+      GE.Common
+      GE.MainAST
+      GE.MainCST
+      Paths_EvoAlg
+  autogen-modules:
+      Paths_EvoAlg
+  hs-source-dirs:
+      app
+  default-extensions:
+      OverloadedStrings
+      StrictData
+      LambdaCase
+      InstanceSigs
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -Wno-orphans -Wno-missing-export-lists -threaded -rtsopts -with-rtsopts=-N6 -O2 -main-is GP.Main
+  build-depends:
+      EvoAlg
+    , base >=4.7 && <5
+    , bytestring
+    , cassava
+    , containers
+    , deepseq
+    , directory
+    , filepath
+    , megaparsec
+    , parallel
+    , parsec
+    , parser-combinators
+    , random
+    , text
+    , vector
+    , vector-algorithms
+  default-language: Haskell2010
